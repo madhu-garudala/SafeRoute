@@ -13,6 +13,7 @@ not use live cameras or GPS.
 
 ## Hackathon
 
+- **Event:** https://luma.com/vastnyc
 - **App:** https://team-1-app.thecosmoslabs.com/app/
 - **Hackathon helper scripts and documentation:** https://github.com/vast-data/vast-builders-challenge#vast-builders-challenge-video-agents
 - **Video demo:** https://drive.google.com/drive/u/0/folders/1wlUDTBfK_u7htX3B_dBzQlylpunRDs8H
