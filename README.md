@@ -18,6 +18,20 @@ not use live cameras or GPS.
 - **Video demo:** https://drive.google.com/drive/u/0/folders/1wlUDTBfK_u7htX3B_dBzQlylpunRDs8H
 - **Hackathon submission:** https://tokensand.com/p/safe-route?mode=developer
 
+## Screenshots
+
+![Wildfire drill: the route from Home to School avoids the flagged corners](docs/screenshots/overview-wildfire.jpg)
+
+*A simulated wildfire at T+0. The blue line is the route from Home to School; red corners are not
+passable and dashed orange corners are predicted to fail next.*
+
+| | |
+|---|---|
+| ![Hurricane camera view with the Cosmos3-Reason verdict](docs/screenshots/camera-hurricane.jpg) | ![Hurricane at T+30 with deep flooding](docs/screenshots/hurricane-t30-flooding.jpg) |
+| *Click a corner to see its clip and the Cosmos3-Reason verdict.* | *Hurricane at T+30: deep flooding, and most of the area is not passable.* |
+| ![All 100 feeds during a wildfire at T+20](docs/screenshots/all-feeds-wildfire.jpg) | ![Model calls panel with W&B Weave trace ids](docs/screenshots/model-calls.jpg) |
+| *All 100 feeds at T+20 of a wildfire, laid out like the map.* | *Every model call, with timings and W&B Weave trace ids.* |
+
 ## What it does
 
 - **Sees each intersection.** NVIDIA Cosmos3-Reason watches every clip and reports whether the
@@ -29,7 +43,7 @@ not use live cameras or GPS.
   T+20 and T+30 minutes, so leaving now and leaving in ten minutes can give different routes.
 - **Predicts, then checks itself.** Corners downwind of a hit are predicted to fail next, and
   each prediction is scored at the next step against what the models saw.
-- **Is not hard-coded.** "New disaster location" starts the disaster somewhere else, and the
+- **Is not hard-coded.** Picking a new location starts the disaster somewhere else, and the
   spread and the routes change with it.
 - **Briefs the driver.** W&B Inference (Llama 3.1 8B) writes a dispatcher briefing for every
   route, and every model call is traced to W&B Weave.
@@ -52,6 +66,7 @@ not use live cameras or GPS.
 | [tools/saferoute/](tools/saferoute/) | The app: Flask backend, single-page Leaflet UI and tests |
 | [tools/saferoute/README.md](tools/saferoute/README.md) | How it works in detail, environment variables, running and deployment |
 | [docs/video_demo_script.md](docs/video_demo_script.md) | Production script for the demo video |
+| [docs/screenshots/](docs/screenshots/) | Screenshots of the deployed app |
 
 ## Quick start
 
