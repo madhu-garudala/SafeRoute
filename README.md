@@ -14,7 +14,7 @@ not use live cameras or GPS.
 ## Hackathon
 
 - **Event:** https://luma.com/vastnyc
-- **App:** https://team-1-app.thecosmoslabs.com/app/
+- **App:** https://team-1-app.thecosmoslabs.com/app/ (hosted on the workshop cluster during the event; sign-in required)
 - **Hackathon helper scripts and documentation:** https://github.com/vast-data/vast-builders-challenge#vast-builders-challenge-video-agents
 - **Video demo:** https://drive.google.com/drive/u/0/folders/1wlUDTBfK_u7htX3B_dBzQlylpunRDs8H
 - **Hackathon submission:** https://tokensand.com/p/safe-route?mode=developer
@@ -32,6 +32,9 @@ passable and dashed orange corners are predicted to fail next.*
 | *Click a corner to see its clip and the Cosmos3-Reason verdict.* | *Hurricane at T+30: deep flooding, and most of the area is not passable.* |
 | ![All 100 feeds during a wildfire at T+20](docs/screenshots/all-feeds-wildfire.jpg) | ![Model calls panel with W&B Weave trace ids](docs/screenshots/model-calls.jpg) |
 | *All 100 feeds at T+20 of a wildfire, laid out like the map.* | *Every model call, with timings and W&B Weave trace ids.* |
+
+The screenshots show the final deployed version. The code in this repository is the slightly
+earlier version shown in the demo video, so the layout and some labels differ.
 
 ## What it does
 
