@@ -92,4 +92,4 @@ runs again.
 
 ## Demo video
 
-See `video_demo_script.md` at the repo root for the full production script.
+See [docs/video_demo_script.md](../../docs/video_demo_script.md) for the full production script.

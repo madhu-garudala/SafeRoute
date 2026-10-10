@@ -28,8 +28,8 @@ isProject: false
 
 **Product shape (pivot):** A **disaster-routing drill** on a **4×4 grid (16 intersections, one camera each)**. The user picks **Hurricane** or **Wildfire**. Each camera feed says whether that corner is usable. A camera that does not answer is treated as **already hit**. The app then marks the **next** corner the event is likely to reach and draws a **route to shelter** that avoids both. This is a labeled drill, not live evacuation guidance. Deployed at team Ingress `/app`.
 
-**Source of truth:** [hackathon_saferoute.md](hackathon_saferoute.md) plus repo skills (still no live GPS vendor APIs).  
-**Deliverable after approval:** implement exactly this plan; persist as [`cursor_plan_v1.md`](cursor_plan_v1.md) in the repo root if you want it checked in.  
+**Source of truth:** the original hackathon brief plus repo skills (still no live GPS vendor APIs).  
+**Deliverable after approval:** implement exactly this plan; persist as `cursor_plan_v1.md` in the repo root if you want it checked in.  
 **Hard constraint:** workshop VM / team namespace only. No secrets in repo, UI, or Weave traces.
 
 ---
@@ -507,7 +507,7 @@ Follow §9b, not the old traffic milestones. **Now: slice 1 only** — static 4�
 
 ## 11. Demo + submission artifacts
 
-- Use the 60-second script in [hackathon_saferoute.md](hackathon_saferoute.md) §9 verbatim spirit.
+- Use the 60-second script in the original hackathon brief §9 verbatim spirit.
 - Capture: workshop App screenshot, route-change moment, Weave trace URL (team/project only), sanitized `source` + `camera_id`, W&B `model` id.
 - Short `tools/saferoute/README.md`: pitch, disclaimers, deploy commands, env var **names**, acceptance results.
 - Stay tuned for organizer submission instructions (no submission skill in repo).
@@ -527,4 +527,4 @@ Follow §9b, not the old traffic milestones. **Now: slice 1 only** — static 4�
 
 ## 13. Implementation todos (post-approval order)
 
-Work proceeds only after you approve this plan. First action after approval: write [`cursor_plan_v1.md`](cursor_plan_v1.md) to the repo root (copy of this plan), then execute phases A→G.
+Work proceeds only after you approve this plan. First action after approval: write `cursor_plan_v1.md` to the repo root (copy of this plan), then execute phases A→G.
