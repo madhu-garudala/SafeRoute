@@ -51,7 +51,6 @@ not use live cameras or GPS.
 |------|----------|
 | [tools/saferoute/](tools/saferoute/) | The app: Flask backend, single-page Leaflet UI and tests |
 | [tools/saferoute/README.md](tools/saferoute/README.md) | How it works in detail, environment variables, running and deployment |
-| [docs/design_plan_v1.md](docs/design_plan_v1.md) | The early design plan. The shipped app grew beyond it (10x10 grid, three destinations) |
 | [docs/video_demo_script.md](docs/video_demo_script.md) | Production script for the demo video |
 
 ## Quick start
@@ -68,3 +67,7 @@ python3 test_router.py    # routing and prediction tests
 ```
 
 The first start analyzes 700 clips, which takes about 7 minutes.
+
+## License
+
+[MIT](LICENSE). Leaflet is vendored in `tools/saferoute/` under its own BSD 2-Clause license.

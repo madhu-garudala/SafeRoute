@@ -70,7 +70,7 @@ How it works, end to end:
 
 | Item | Value |
 |------|-------|
-| App URL (from the VM) | `http://video-lab-team-1.cosmos.vastdata.com/app/` |
+| App URL | `https://team-1-app.thecosmoslabs.com/app/` |
 | Human-facing URL | `https://workshop.thecosmoslabs.com` then the **App** button |
 | Ready check | `GET /app/state` must return `"status":"ready"` |
 | Chrome | `/usr/bin/google-chrome` (supports the H.264 clips) |
@@ -79,7 +79,7 @@ How it works, end to end:
 | Fonts | DejaVu Sans: `/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf` (and `-Bold`) |
 | Text-to-speech | **None installed.** Use burned-in captions. A narration script is in section 7 for an optional human voice-over. |
 | Python | System `python3` only, no pip. Do not try to install packages. |
-| Working dir for output | `/home/madhugarudala/vast-builders-challenge/demo_video/` (create it) |
+| Working dir for output | `demo_video/` (create it) |
 | Scratch | `/tmp/sr_video/` for frames |
 
 ### Rules (from the workspace rules; follow them)
@@ -162,9 +162,9 @@ scene 2 and scene 10 holds. Do not go below 2:00 or above 2:30.
 
 ### 5.1 Pre-flight (off camera)
 
-1. `curl -s http://video-lab-team-1.cosmos.vastdata.com/app/state` → must contain
+1. `curl -s https://team-1-app.thecosmoslabs.com/app/state` → must contain
    `"status":"ready"`. If `running`, poll every 30 s until ready (up to 10 min). Never call prepare.
-2. `mkdir -p /home/madhugarudala/vast-builders-challenge/demo_video /tmp/sr_video/frames`
+2. `mkdir -p demo_video /tmp/sr_video/frames`
 3. Make sure `demo_video/` is ignored by git (add `demo_video/` to the repo `.gitignore` if it
    isn't).
 
@@ -191,7 +191,7 @@ Use a single Node script (ES module, `node record.mjs`). Skeleton:
 import { spawn } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 
-const URL = "http://video-lab-team-1.cosmos.vastdata.com/app/";
+const URL = "https://team-1-app.thecosmoslabs.com/app/";
 const OUT = "/tmp/sr_video";
 mkdirSync(`${OUT}/frames`, { recursive: true });
 const W = 1920, H = 1080;
@@ -431,7 +431,7 @@ All commands run in `/tmp/sr_video`. Font paths:
    ```bash
    printf "file 'title.mp4'\nfile 'main.mp4'\nfile 'closing.mp4'\n" > parts.txt
    ffmpeg -y -f concat -safe 0 -i parts.txt -c copy \
-     /home/madhugarudala/vast-builders-challenge/demo_video/saferoute_demo.mp4
+     demo_video/saferoute_demo.mp4
    ```
    If `-c copy` complains about mismatched streams, re-encode with `-c:v libx264 -crf 18`.
    The video is silent (no audio track). That's expected; a voice-over can be added later with
