@@ -69,7 +69,6 @@ earlier version shown in the demo video, so the layout and some labels differ.
 |------|----------|
 | [tools/saferoute/](tools/saferoute/) | The app: Flask backend, single-page Leaflet UI and tests |
 | [tools/saferoute/README.md](tools/saferoute/README.md) | How it works in detail, environment variables, running and deployment |
-| [docs/video_demo_script.md](docs/video_demo_script.md) | Production script for the demo video |
 | [docs/screenshots/](docs/screenshots/) | Screenshots of the deployed app |
 
 ## Quick start

@@ -89,7 +89,3 @@ kubectl -n team-1 exec deploy/saferoute -- sh -c 'kill -INT 1'
 
 A full `rollout restart` creates a new pod with an empty `/data`, so the 7-minute analysis
 runs again.
-
-## Demo video
-
-See [docs/video_demo_script.md](../../docs/video_demo_script.md) for the full production script.
